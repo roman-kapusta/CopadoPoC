@@ -81,7 +81,7 @@
         <description>Change in the description</description>
         <externalId>false</externalId>
         <label>Active</label>
-        <required>false</required>
+        <required>true</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
         <valueSet>
@@ -89,13 +89,18 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>No</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>No</label>
                 </value>
                 <value>
                     <fullName>Yes</fullName>
                     <default>false</default>
                     <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>Maybe</fullName>
+                    <default>false</default>
+                    <label>Maybe</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -110,6 +115,7 @@
     </fields>
     <fields>
         <fullName>Currency_Test__c</fullName>
+        <description>Dummy description</description>
         <externalId>false</externalId>
         <label>Currency_Test</label>
         <precision>16</precision>
@@ -328,6 +334,24 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>TEst_Field_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Field 1</label>
+        <precision>16</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TestField__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TestField</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Test_Field__c</fullName>
         <description>asdasdasdasdasdasdasd</description>
         <externalId>false</externalId>
@@ -337,6 +361,45 @@
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Test_Picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>TEst Picklist</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Picklist Value 1</fullName>
+                    <default>true</default>
+                    <label>Picklist Value 1</label>
+                </value>
+                <value>
+                    <fullName>Picklist Value 2</fullName>
+                    <default>false</default>
+                    <label>Picklist Value 2</label>
+                </value>
+                <value>
+                    <fullName>Something New Here</fullName>
+                    <default>false</default>
+                    <label>Something New Here</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Text_Field__c</fullName>
+        <externalId>false</externalId>
+        <label>TExt Field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>TickerSymbol</fullName>
@@ -449,7 +512,7 @@
     <validationRules>
         <fullName>Employees_cant_be_negative</fullName>
         <active>true</active>
-        <errorConditionFormula>NumberOfEmployees &lt; 0</errorConditionFormula>
+        <errorConditionFormula>OR(ISCHANGED(Active__c),NOT($User.IsActive))</errorConditionFormula>
         <errorDisplayField>NumberOfEmployees</errorDisplayField>
         <errorMessage>Number of employees cannot be negative</errorMessage>
     </validationRules>
