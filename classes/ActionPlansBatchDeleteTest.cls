@@ -45,7 +45,7 @@ public with sharing class ActionPlansBatchDeleteTest {
 		
 		ActionPlansBatchDelete taskBatch = new ActionPlansBatchDelete(lIds,Userinfo.getUserId());
 		Database.ExecuteBatch( taskBatch );
-	//
+	///
 		test.stopTest();
 	}
 	
