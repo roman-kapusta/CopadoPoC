@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>ActionPlansBatchDeleteTest</members>
-        <members>CaseSwarmRuleSetup</members>
+        <members>ActionPlansBatchTaskBuilder</members>
         <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ActionPlanTemplateCreation</members>
+        <name>ApexPage</name>
     </types>
     <version>41.0</version>
 </Package>

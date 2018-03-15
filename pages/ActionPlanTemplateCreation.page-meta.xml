@@ -6,6 +6,11 @@
     <description>Creation page for Action Plan Templates.</description>
     <label>Action Plan Template Creation</label>
     <packageVersions>
+        <majorNumber>10</majorNumber>
+        <minorNumber>1</minorNumber>
+        <namespace>copado</namespace>
+    </packageVersions>
+    <packageVersions>
         <majorNumber>1</majorNumber>
         <minorNumber>7</minorNumber>
         <namespace>sf_com_apps</namespace>

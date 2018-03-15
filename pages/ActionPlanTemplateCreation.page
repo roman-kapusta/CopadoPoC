@@ -31,18 +31,17 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
 <apex:page id="editPage" tabStyle="ActionPlanTemplate__c" standardController="ActionPlanTemplate__c" extensions="ActionPlanTemplateCreationController" >
-    
     <script>
     	var AP_ITSELF_TASK_DEPENDENCY	= '{!$Label.ap_ItselfDependencyError}';
     	var AP_REMOVE_CYCLIC_DEPENDENCY = '{!$Label.ap_Error_Cyclic_Dependency_Found}';
     	var AP_DAYS_AFTER_MSG			= "{!$Label.ap_days_after_msg}";
     	var AP_TASKS_CONFIRM_MSG		= "{!$Label.ap_Confirm_Tasks_Deletion}";
+                
     </script>
     <script type="text/javascript" src="{!$Resource.ActionPlan_Utilities}"></script>
 	<apex:includeScript value="{!$Resource.ActionPlan_ActionPlanTemplateCreationScripts}"/>
 	<apex:stylesheet value="{!$Resource.ActionPlan_ActionPlanTemplateCreationStyles}"/>
     <apex:sectionHeader title="{!$Label.ap_ActionPlanTemplates} {!$Label.ap_Edit}" subtitle="{!$Label.ap_New} {!$Label.ap_Action_Plan_Template}" help="/help/doc/user_ed.jsp?loc=help" />
-    
     <apex:form id="templateForm">
         
         <apex:outputPanel rendered="{!(actionPlanTemplate.Id != null)}">
@@ -59,18 +58,13 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
             <!-- Information Section -->
             <apex:pageBlockSection id="informationSection" title="{!$Label.ap_Information}" columns="1">
            
-				<apex:pageBlockSectionItem >
-					<apex:outputLabel value="{!$ObjectType.ActionPlanTemplate__c.fields.Name.label}"/>
-					<apex:inputField required="true" id="name" value="{!actionPlanTemplate.Name}" style="width:300px"/>	
-                </apex:pageBlockSectionItem>
                 
                 <apex:pageBlockSectionItem >
 	                <apex:outputLabel value="{!$ObjectType.ActionPlanTemplate__c.fields.Description__c.label}"/>
-	                <apex:inputField id="description" value="{!actionPlanTemplate.Description__c}" style="width:300px"/>
+	                <apex:inputField id="description" value="{!actionPlanTemplate.Description__c}" style="width:300px; color:coral;"/>
                 </apex:pageBlockSectionItem>
                 
             </apex:pageBlockSection>
-            <!-- End Information Section -->
             
             <!-- Tasks Section -->
             <apex:pageBlockSection id="taskSection" title="{!$Label.ap_Tasks}" columns="1"> 
