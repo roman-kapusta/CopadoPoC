@@ -63,7 +63,6 @@ global with sharing class ActionPlansBatchBuilder implements Database.Batchable<
                 str.toLowerCase();
             }
         }catch(Exception e){
-            
             AsyncApexJob a = [Select Id, Status, NumberOfErrors, JobItemsProcessed,
                                 TotalJobItems, CreatedBy.Email,ExtendedStatus
                                 from AsyncApexJob where Id =
