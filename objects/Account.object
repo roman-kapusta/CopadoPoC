@@ -81,7 +81,7 @@
         <description>Change in the description</description>
         <externalId>false</externalId>
         <label>Active</label>
-        <required>true</required>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
         <valueSet>
@@ -89,7 +89,7 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>No</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>No</label>
                 </value>
                 <value>
@@ -338,7 +338,7 @@
         <externalId>false</externalId>
         <label>Test Field 1</label>
         <precision>16</precision>
-        <required>true</required>
+        <required>false</required>
         <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
@@ -366,7 +366,7 @@
         <fullName>Test_Picklist__c</fullName>
         <externalId>false</externalId>
         <label>TEst Picklist</label>
-        <required>true</required>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
         <valueSet>
@@ -390,6 +390,20 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Test_Rollup__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Rollup</label>
+        <summarizedField>Opportunity.Amount</summarizedField>
+        <summaryFilterItems>
+            <field>Opportunity.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Web</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>Text_Field__c</fullName>
@@ -515,6 +529,12 @@
         <errorConditionFormula>OR(ISCHANGED(Active__c),NOT($User.IsActive))</errorConditionFormula>
         <errorDisplayField>NumberOfEmployees</errorDisplayField>
         <errorMessage>Number of employees cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Something</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(ISCHANGED(Active__c),NOT($User.IsActive))</errorConditionFormula>
+        <errorMessage>Error</errorMessage>
     </validationRules>
     <webLinks>
         <fullName>Billing</fullName>

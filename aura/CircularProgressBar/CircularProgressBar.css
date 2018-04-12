@@ -2,6 +2,7 @@
 {
     content: " "; 
     display: table !important;
+
 }
 
 .THIS  .clearFloats:after {clear: both;}
@@ -176,11 +177,11 @@
   color: #ee1212;
 }
 .THIS .container.red .bar, .THIS .container.red .fill {
-  border-color: #4db53c !important;
+  border-color: #12ff00 !important;
 }
 
 .THIS .container.red:hover > span {
-  color: #00e0ff;
+  color: #fcff00;
 }
 
 .THIS.legend{ 

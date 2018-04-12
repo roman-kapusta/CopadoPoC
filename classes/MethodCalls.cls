@@ -1,7 +1,8 @@
 @istest
 public class MethodCalls {
+    @IsTest
     // Change that was done in the Salesforce Setup UI
-    public static testmethod void Test_Inner_Static_Methods_Calls() {
+    public static void Test_Inner_Static_Methods_Calls() {
         Integer i;//
         DummyClass obj = new DummyClass('Testing constructor');
 
@@ -16,7 +17,7 @@ public class MethodCalls {
 
         System.debug('Inner static void call with params');
         Inner_Void_Static_Method_With_Params(3, 'dummy value');
-        // TODO: asdasd//
+        // TODO: asdasd//  
         System.debug('Inner static call with params and return');
         i = Inner_Static_Method_With_Params(4, 'dummy another value');
 
@@ -38,7 +39,7 @@ public class MethodCalls {
     
         System.debug('Method with params');
         i = obj.Method_With_Params(6, '6 text');
-        System.assertEquals(7, i);
+        System.assertEquals(6, i);
 
         System.debug('Method without params');
         i = obj.Method_Without_Params();
@@ -102,6 +103,7 @@ public class MethodCalls {
     {
         DummyClass.Dummy_For_Coverage();
         //Change from the IDE
+        //
     }
 
     public static testmethod void ListIteration()
@@ -111,6 +113,7 @@ public class MethodCalls {
         lst.add('2');
         lst.remove(1);
         lst.add('3');
+        //
         lst.sort();
         System.debug(lst.size());
     }
@@ -124,7 +127,7 @@ public class MethodCalls {
         System.debug('Private_Inner_Void_Static_Method_Without_Params');
         //
     }
-// Change from somebody else
+	//
     /**
      * @description Void method in the same class with parameters  
      */

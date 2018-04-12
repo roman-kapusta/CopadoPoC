@@ -1,5 +1,6 @@
 <aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" controller="CircularProgressController">
-    <aura:attribute name="recordId" type="Id" description="Id of record on which this component is hosted." />
+		
+<aura:attribute name="recordId" type="Id" description="Id of record on which this component is hosted." />
     <aura:attribute name="sObjectName" type="String" description="API name of record on which this component is hosted." />
     <aura:attribute name="resultFormat" type="String" default="Percentage" description="Format of result to be displayed inside Circular Progress Bar. Allowed values are Percentage, Actual Number, Mix." />
     <aura:attribute name="Legend" type="String" description="Legend to display" />

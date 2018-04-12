@@ -1,21 +1,17 @@
-/**
-* @author dreamforce16-demo@welkinsuite.com
-* @description asdasd
-*/ 
 public virtual class DummyClass {
     private static Integer AutoStaticField = 2;
     private integer AutoField = 1;
     public string dummyField;
     public string someOtherField;
     private string privateField;
-    // Hello from Web
+
     private class MyClass
     {
         public Integer MyInt;
 
         public MyClass()
         {
-            MyInt = 10;  // change here
+            MyInt = 10;  // change this
         }
     }
 
@@ -47,21 +43,12 @@ public virtual class DummyClass {
         MyVariable = new MyClass();
         System.debug(i + j + Constructors.CallStack4());
     }
-
-    /**
-    * @description 
-    * @param test 
-    */ 
+    
     public DummyClass(String test) {
-        ActionPlan__c testVariable;
+		ActionPlan__c dummyVariable;
         MyVariable = new MyClass();
         System.debug('Called DummyClass constructor with ' + test + ' parameter');
         Void_Method_Without_Params();
-        
-
-
-
-
     }
 
     public static void Void_Static_Method_Without_Params() {
@@ -72,58 +59,47 @@ public virtual class DummyClass {
         System.debug('DummyClass.Void_Method_Without_Params');
     }
 
-    /**
-    * Hello world
-    */ 
     private void Private_Inner_Void_Method_Without_Params() {
         System.debug('DummyClass.Private_Inner_Void_Method_Without_Params');
-        ActionPlan__c customVar = new ActionPlan__c();
         
     }
 
-    /**
-    * @description 
-    * @param num 
-    * @param text 
-    */ 
     public void Void_Method_With_Params(Integer num, String text) {
-        ActionPlan__c newVariable;
         System.debug('DummyClass.Void_Method_With_Params');
     }
-    //
 
-
+   
     /**
-    * Hello world
+    * @description Some details are going here
+    * @param num P1 description
+    * @param text Text description
+    * @return 
     */ 
     public Integer Method_With_Params(Integer num, String text) {
         System.debug('DummyClass.Method_With_Params');
         return num;
     }
 
-    /**
-    * @description 
-    * @return 
-    */ 
     public Integer Method_Without_Params() {
         System.debug('DummyClass.Method_Without_Params');
         return 10;
     }
 
-    public void Void_Method_With_Subcalls() {
-        ActionPlan__c testVariable;
 
+    public void Void_Method_With_Subcalls() {
+        ActionPlan__c newVar;
         System.debug('DummyClass.Void_Method_With_Subcall');
         Void_Method_Without_Params();   // does something
         Void_Static_Method_Without_Params();
         Private_Inner_Void_Method_Without_Params();
+    
     }
 
     public void Void_Method_With_Queries() {
-        ActionPlan__c testVariable;
+        ActionPlan__c dummyVariable;
         System.debug('DummyClass.Void_Method_With_Queries');
         Account acc = new Account();
-        acc.Name = 'TEsting';//
+        //acc.Name = 'TEsting';//
         insert acc;
         for (Integer i = 0; i< 3; i++) {
             Void_Method_With_Subcalls();
@@ -166,54 +142,7 @@ public virtual class DummyClass {
         i++;
         i++;
         i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
-        i++;
+     
         i++;
         i++;
         i++;
