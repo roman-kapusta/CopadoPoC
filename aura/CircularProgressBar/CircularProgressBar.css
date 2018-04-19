@@ -174,10 +174,10 @@
 }
 
 .THIS .container.orange:hover > span {
-  color: #ee1212;
+  color: #e500ff;
 }
 .THIS .container.red .bar, .THIS .container.red .fill {
-  border-color: #12ff00 !important;
+  border-color: #dd9d22 !important;
 }
 
 .THIS .container.red:hover > span {

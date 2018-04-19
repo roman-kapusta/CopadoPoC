@@ -2,16 +2,12 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DummyClass</members>
-        <members>MethodCalls</members>
+        <members>TestClass</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>CircularProgressBar</members>
         <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>Account</members>
-        <name>CustomObject</name>
     </types>
     <version>42.0</version>
 </Package>
